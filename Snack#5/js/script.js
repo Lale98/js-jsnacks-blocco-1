@@ -19,15 +19,19 @@ for (i=0; i<6; i++) {
 
     } while (isNaN(numero) == true);
 
-    DispariPush (numero, lista);
+
+    if (verificaDispari(numero) == 'dispari') {
+        lista.push(numero);
+    }
+
 }
 
 console.log(lista);
 
 
-function DispariPush (num, list) {
+function verificaDispari (num) {
     if (num % 2 == 1) {
-        return list.push(num);
+        return 'dispari';
     }
-    return num;
+    return 'pari';
 }
