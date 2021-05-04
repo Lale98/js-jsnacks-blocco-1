@@ -13,5 +13,5 @@ function numeroRandom (min, max) {
 for (i=0; i<10; i++) {
     var nome = nomi[numeroRandom(0,9)];
     var cognome = cognomi[numeroRandom(0,9)];
-    document.getElementById('lista').innerHTML += "<li class='element'>" + nome + ' ' + cognome + "</li>";
+    document.getElementById('lista').innerHTML += "<li>" + nome + ' ' + cognome + "</li>";
 }
