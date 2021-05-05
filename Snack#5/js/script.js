@@ -8,17 +8,14 @@ var numero;
 
 
 for (i=0; i<6; i++) {
-    do {
-        numero = parseInt(prompt('inserisci un numero'));
+
+    numero = parseInt(prompt('inserisci un numero'));
+    console.log(numero);
+
+    while (isNaN(numero)) {
+        numero = parseInt(prompt('Ho detto un numero !'));
         console.log(numero);
-
-        while (isNaN(numero)) {
-            numero = parseInt(prompt('Ho detto un numero !'));
-            console.log(numero);
-        }
-
-    } while (isNaN(numero) == true);
-
+    }
 
     if (verificaDispari(numero) == 'dispari') {
         lista.push(numero);

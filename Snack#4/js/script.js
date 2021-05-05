@@ -4,14 +4,26 @@
 
 var nomi = ['Alessandro', 'Dario', 'Daniela', 'Luca', 'Nicola', 'Chiara', 'Maria', 'Davide', 'Martina', 'Laura'];
 var cognomi = ['Rossi', 'Brembilla', 'Ubiali', 'Sala', 'Cortinovis', 'Brignoli', 'Zonchi', 'Nava', 'Gervasoni', 'Marchesi'];
+var lista=[];
 
 function numeroRandom (min, max) {
     num = Math.floor(Math.random() * (max - min + 1) + min );
     return num;
 }
 
-for (i=0; i<10; i++) {
-    var nome = nomi[numeroRandom(0,9)];
-    var cognome = cognomi[numeroRandom(0,9)];
-    document.getElementById('lista').innerHTML += "<li>" + nome + ' ' + cognome + "</li>";
+function listaNomi (nome, cognome) {
+    
+    var nome = nomi[numeroRandom(0,nomi.length - 1)];
+    var cognome = cognomi[numeroRandom(0,cognomi.length - 1)];
+        
+    return nome + ' ' + cognome;
 }
+
+
+for (i=0; i<10; i++) {
+    var randomName = listaNomi(nomi,cognomi);
+    document.getElementById('lista').innerHTML +="<li>" + randomName + "</li>";
+
+}
+
+    
